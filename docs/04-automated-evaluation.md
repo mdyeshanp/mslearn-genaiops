@@ -395,12 +395,12 @@ The evaluation script integrates with GitHub Actions to automatically run evalua
 
     Save the `appId`, `tenant`, and `password` values from the output — you will use them in the next steps.
 
-    Assign the **Azure AI User** role so the service principal can call the Foundry project API:
+    Assign the **Foundry User** role so the service principal can call the Foundry project API:
 
     ```powershell
     az role assignment create `
       --assignee "<appId>" `
-      --role "Azure AI User" `
+      --role "Foundry User" `
       --scope "/subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.CognitiveServices/accounts/<ai-account-name>"
     ```
 
@@ -665,7 +665,7 @@ Create `experiments/automated/model_comparison.md` with:
 
 **Resolution**:
 - Run `az login` to refresh Azure credentials
-- Verify the service principal has the **Azure AI User** role at the CognitiveServices account scope — this role has `Microsoft.CognitiveServices/*` wildcard data actions required for `AIServices/agents/write`. `Azure AI Developer` alone is **not sufficient**
+- Verify the service principal has the **Foundry User** role at the CognitiveServices account scope — this role has `Microsoft.CognitiveServices/*` wildcard data actions required for `AIServices/agents/write`. `Azure AI Developer` alone is **not sufficient**
 - Check `AZURE_AI_PROJECT_ENDPOINT` in `.env` file is correct and includes `/api/projects/<project>`
 
 ### OIDC login fails on PR workflows (`AADSTS700213`)
