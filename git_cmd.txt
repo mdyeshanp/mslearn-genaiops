@@ -1,0 +1,21 @@
+Id CommandLine                                                              
+  -- -----------                                                              
+   1 try { . "c:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\resou...
+   2 git status                                                               
+   3 azd auth login                                                           
+   4 az login                                                                 
+   5 az login                                                                 
+   6 azd up                                                                   
+   7 azd env get-values > .env                                                
+   8 python -m venv .venv                                                     
+   9 .venv/Scripts/Activate.ps1                                               
+  10 python -m pip install -r requirements.txt                                
+  11 cd src/agents/trail_guide_agent                                          
+  12 python trail_guide_agent.py                                              
+  13 python trail_guide_agent.py                                              
+  14 python trail_guide_agent.py                                              
+  15 cd ../../..                                                              
+  16 python src/tests/interact_with_agent.py                                  
+  17 git add .                                                                
+  18 git status                                                               
+  19 git history     
